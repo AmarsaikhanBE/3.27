@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #eee;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    color: navy;
+    cursor: pointer;
+}
+
+.container {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(0, 153, 255);
+    width: 380px;
+    box-shadow: 5px 5px 5px rgba(26, 31, 104, 0.329);
+}
+
+h1 {
+    text-align: center;
+}
+
+#toDoList {
+    overflow-y: scroll;
+    padding: 5px;
+    height: 400px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: rgb(0, 0, 0, .1);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#toDoList::-webkit-scrollbar {
+    display: none;
+}
+
+#toDoList>div {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#toDoList>div>div {
+    width: 100%;
+    min-height: 30px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    background: linear-gradient(rgb(255, 255, 255, .1), rgb(0, 0, 0, .1));
+    align-items: center;
+    border-radius: 15px;
+}
+
+#toDoList p {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    line-height: 30px;
+    padding-left: 15px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+#toDoList button {
+    margin: auto;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    font-weight: 900;
+    font-size: 10px;
+    box-shadow: 1px 1px rgb(0, 183, 255);
+    background-color: rgb(255, 153, 0);
+}
+
+#toDoList button.rmv-btn {
+    background-color: rgba(247, 247, 247, 0.61);
+}
+
+#toDoList button:hover,
+#toDoList button.active {
+    background-color: navy;
+    color: white;
+}
+
+.import {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    /* margin-top: 20px; */
+}
+
+.import input {
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 24px;
+    border-radius: 20px;
+    border: none;
+    width: 325px;
+}
+
+#addItem {
+    border-radius: 50%;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+}
+
+#addItem:hover {
+    background-color: navy;
+    color: white;
+}
+
+.import * {
+    box-shadow: 2px 2px 2px rgba(1, 57, 94, 0.664);
+}
